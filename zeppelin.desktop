@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Zeppelin
+GenericName[pt_BR]=Menu de aplicativos
+
+
+
+Keywords=System
+Icon=zeppelin
+
+Type=Application
+Categories=System;
+
+Exec=menu_zeppelin.sh
+
+Terminal=false
+
+Name[pt_BR]=zeppelin

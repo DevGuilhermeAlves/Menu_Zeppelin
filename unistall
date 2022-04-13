@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#LOG=
+
+if cd /usr/local/bin && rm menu_zeppelin.sh
+then
+
+echo "zeppelin---[DESINSTALADO]"
+
+fi
+
+
+if cd /usr/share/pixmaps && rm zeppelin.png
+then
+
+echo "icone---[DESINSTALADO]"
+
+fi
+
+if cd /usr/share/applications && rm zeppelin.desktop
+then
+
+echo "zeppelin.desktop---[DESINSTALADO]"
+
+fi
+

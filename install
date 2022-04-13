@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+
+[ $USER = root ] || echo "precisa usar o sudo" || exit
+
+
+
+
+if cp menu_zeppelin.sh /usr/local/bin 1> /dev/null 2>&1
+then
+
+echo "zeppelin---[INSTALADO]"
+
+
+if ! chmod +x /usr/local/bin/menu_zeppelin.sh
+then
+
+echo "não foi possivel dar permissão para o menu_zeppelin.sh"
+
+exit 1
+
+fi
+fi
+
+
+if cp zeppelin.png /usr/share/pixmaps 1> /dev/null 2>&1
+then
+
+echo "icone---[INSTALADO]"
+
+if ! cp zeppelin.png /usr/share/pixmaps
+then
+
+echo "não foi possivel instalar icone do menu_zeppelin.sh"
+
+exit 1
+
+fi
+fi
+
+if cp zeppelin.desktop /usr/share/applications 1> /dev/null 2>&1
+then
+
+echo "zeppelin.desktop---[INSTALADO]"
+
+if ! chmod +x /usr/share/applications/zeppelin.desktop
+then
+
+echo echo "não foi possivel dar permissão para o zeppelin.desktop"
+
+fi
+fi
+
