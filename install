@@ -1,53 +1,55 @@
 #!/usr/bin/env bash
 
 
-[ $USER = root ] || echo "precisa usar o sudo" || exit
+[ $USER = root ] || echo "precisa usar o sudo" || exit # Entra em uma condição em que se o usuário não for root ele irá colocar uma mensagem na tela e sair
 
 
 
 
-if cp menu_zeppelin.sh /usr/local/bin 1> /dev/null 2>&1
-then
+        if cp menu_zeppelin.sh /usr/local/bin 1> /dev/null 2>&1
+            then
 
-echo "zeppelin---[INSTALADO]"
+                echo "zeppelin---[INSTALADO]"
+        fi
+
+        if ! chmod +x /usr/local/bin/menu_zeppelin.sh
+            then
+
+                echo "não foi possivel dar permissão para o menu_zeppelin.sh"
+
+                exit 1
+
+        fi
 
 
-if ! chmod +x /usr/local/bin/menu_zeppelin.sh
-then
 
-echo "não foi possivel dar permissão para o menu_zeppelin.sh"
+        if cp zeppelin.png /usr/share/pixmaps 1> /dev/null 2>&1
+            then
 
-exit 1
+                echo "icone---[INSTALADO]"
 
-fi
-fi
+        fi
+
+        if ! cp zeppelin.png /usr/share/pixmaps
+            then
+
+                echo "não foi possivel instalar icone do menu_zeppelin.sh"
+
+                exit 1
+
+        fi
 
 
-if cp zeppelin.png /usr/share/pixmaps 1> /dev/null 2>&1
-then
+        if cp zeppelin.desktop /usr/share/applications 1> /dev/null 2>&1
+            then
 
-echo "icone---[INSTALADO]"
+                echo "zeppelin.desktop---[INSTALADO]"
 
-if ! cp zeppelin.png /usr/share/pixmaps
-then
+        fi
 
-echo "não foi possivel instalar icone do menu_zeppelin.sh"
+        if ! chmod +x /usr/share/applications/zeppelin.desktop
+            then
 
-exit 1
+                echo echo "não foi possivel dar permissão para o zeppelin.desktop"
 
-fi
-fi
-
-if cp zeppelin.desktop /usr/share/applications 1> /dev/null 2>&1
-then
-
-echo "zeppelin.desktop---[INSTALADO]"
-
-if ! chmod +x /usr/share/applications/zeppelin.desktop
-then
-
-echo echo "não foi possivel dar permissão para o zeppelin.desktop"
-
-fi
-fi
-
+        fi
