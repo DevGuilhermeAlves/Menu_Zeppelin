@@ -31,8 +31,8 @@ skraper="/home/$USER/Downloads/Lutris/Skraper-1.1.1/SkraperUI.exe"
 
 # Interface
 
-MENU=$( yad --list "${LISTA[@]}" \ 
---text="\t Bem Vindo ao Zeppelin" \ 
+MENU=$( yad --list "${LISTA[@]}" \
+--text="\t Bem Vindo ao Zeppelin" \
 --column="Selecione o aplicativo que deseja:" \
 --width=500 \
 --height=400 \
